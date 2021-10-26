@@ -1,0 +1,6 @@
+mixin img-responsive(src,alt)
+	img(src=src style="max-width:100%;height:auto;vertical-align:top;" alt=alt)&attributes(attributes)
+mixin img-responsive-lazy(src,alt)
+	img(data-src=src style="max-width:100%;height:auto;vertical-align:top;" alt=alt loading="lazy")&attributes(attributes)
+mixin video-responsive(src)
+	video(src=src style="max-width:100%;height:auto;vertical-align:top;" autoplay loop muted playsinline)&attributes(attributes)

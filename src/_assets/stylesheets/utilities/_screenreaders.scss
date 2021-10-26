@@ -1,0 +1,8 @@
+// Utilities: Screenreaders
+// -------------------------
+.u-sr-only {
+	@include sr-only();
+}
+.u-sr-only_focusable {
+	@include sr-only-focusable();
+}

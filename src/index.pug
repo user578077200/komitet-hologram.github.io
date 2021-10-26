@@ -1,0 +1,11 @@
+extends _layouts/default.pug
+block append variables
+	- var pageTitle = 'Общее фото';
+	- var pageDescription = 'Комитет';
+block content
+	.screen
+		main.screen__main(role="main")
+			.members-photo
+		footer.screen__footer(role="contentinfo")
+			a.button.button_size_m.button_theme_primary(href="/scheme/index.html")
+				| Схема участников
