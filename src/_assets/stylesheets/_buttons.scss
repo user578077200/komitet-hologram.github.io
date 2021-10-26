@@ -1,0 +1,128 @@
+// Buttons
+// -------------------------
+.button {
+	display: inline-block;
+	font-weight: $font-weight-base;
+	text-align: center;
+	text-transform: lowercase;
+	white-space: nowrap;
+	vertical-align: middle;
+	user-select: none;
+	background-color: transparent;
+	border: .25rem solid transparent;
+	transition: all $transition-duration-base $ease-in-out-cubic;
+	touch-action: manipulation;
+	&:hover,
+	&:active {
+		transition: none;
+	}
+	&:hover {
+		text-decoration: none;
+	}
+	&:focus {
+		outline: 0;
+	}
+	&:not(:disabled):not(.button_state_disabled) {
+		cursor: pointer;
+	}
+	&:disabled,
+	&.button_state_disabled {
+		cursor: not-allowed;
+	}
+}
+a.button {
+	display: inline-block;
+	&:disabled,
+	&.button_state_disabled {
+		pointer-events: none;
+	}
+}
+
+// Themes
+.button_theme_primary {
+	color: $color-primary;
+	background-color: $brand-red;
+	border-color: $brand-red;
+	&:hover,
+	&:active {
+		background-color: darken($brand-red,7.5%);
+		border-color: darken($brand-red,7.5%);
+	}
+	&:disabled,
+	&.button_state_disabled {
+		opacity: .56;
+		&:hover,
+		&:active {
+			color: $color-primary;
+			background-color: $brand-red;
+			border-color: $brand-red;
+		}
+	}
+}
+.button_theme {
+	&_secondary {
+		color: $black;
+		background-color: darken($white,5%);
+		border-color: darken($white,5%);
+		&:hover,
+		&:active {
+			color: $black;
+			background-color: $white;
+			border-color: $white;
+		}
+		&:disabled,
+		&.button_state_disabled {
+			opacity: .56;
+			&:hover,
+			&:active {
+				color: $black;
+				background-color: darken($white,5%);
+				border-color: darken($white,5%);
+			}
+		}
+	}
+}
+
+// Sizes
+.button_size_s {
+
+}
+.button_size_m {
+	font-size: 1.5rem;
+	line-height: 1.25;
+	padding-top: 1rem;
+	padding-bottom: 1.125rem;
+	border-width: .25rem;
+	border-radius: 2.25rem;
+	&.button_theme_primary {
+		padding-left: 2rem;
+		padding-right: 2rem;
+	}
+	&.button_theme_secondary {
+		padding-left: 1.25rem;
+		padding-right: 1.25rem;
+	}
+}
+.button_size_l {
+}
+.button_size_xl {
+}
+
+// Block button
+.button_fullwidth {
+	display: block;
+	width: 100%;
+}
+input[type="submit"],
+input[type="reset"],
+input[type="button"] {
+	&.button_level_block {
+		width: 100%;
+	}
+}
+
+.button__icon {
+	vertical-align: text-bottom;
+	@include size(1em);
+	margin-right: .5em;
+}

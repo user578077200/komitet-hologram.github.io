@@ -1,0 +1,8 @@
+// Utilities: Z-index
+// -------------------------
+.u-z-index-background {
+	z-index: $z-index-background !important;
+}
+.u-z-index-foreground {
+	z-index: $z-index-foreground !important;
+}

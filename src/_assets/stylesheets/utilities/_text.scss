@@ -1,0 +1,19 @@
+// Utilities: Text
+// -------------------------
+// Hyphens
+.u-text_hyphens_auto     { hyphens: auto !important; }
+.u-text_hyphens_manual   { hyphens: manual !important; }
+.u-text_hyphens_none     { hyphens: none !important; }
+
+// Alignment
+.u-text_align_justify    { text-align: justify !important; }
+.u-text_align_nowrap     { white-space: nowrap !important; }
+.u-text_align_overflow   { @include text-overflow; }
+.u-text_align_left       { text-align: left !important; }
+.u-text_align_right      { text-align: right !important; }
+.u-text_align_center     { text-align: center !important; }
+
+// Transformation
+.u-text_transform_lowercase  { text-transform: lowercase !important; }
+.u-text_transform_uppercase  { text-transform: uppercase !important; }
+.u-text_transform_capitalize { text-transform: capitalize !important; }

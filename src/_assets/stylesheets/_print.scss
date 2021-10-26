@@ -1,0 +1,62 @@
+// Print
+// -------------------------
+@media print {
+	// Reset
+	* {
+		&,
+		&:before,
+		&:after {
+			color: #000 !important;
+			text-shadow: none !important;
+			background: transparent !important;
+			box-shadow: none !important;
+		}
+	}
+	// Typography
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		page-break-after: avoid;
+	}
+	abbr[title] {
+		&:after {
+			content: " (" attr(title) ")";
+		}
+	}
+	pre {
+		white-space: pre-wrap !important;
+    }
+    pre,
+    blockquote {
+		page-break-inside: avoid;
+    }
+	// Images
+	img {
+		page-break-inside: avoid;
+	}
+	a img { border: none; }
+	// Links
+	a[href] {
+		&:after {
+			content: " (" attr(href) ")";
+		}
+	}
+	a[href^="#"],
+	a[href^="mailto:"],
+	a[href^="tel:"],
+	a[href^="javascript:"] {
+		&:after {
+			content: "";
+		}
+	}
+	// Tables
+	thead {
+		display: table-header-group;
+    }
+    tr {
+		page-break-inside: avoid;
+    }
+}

@@ -1,0 +1,9 @@
+// Utilities: Images
+// -------------------------
+.u-image {
+	font: #{0/0} a;
+	border: 0;
+}
+.u-image_type_responsive {
+	@include img-responsive;
+}
