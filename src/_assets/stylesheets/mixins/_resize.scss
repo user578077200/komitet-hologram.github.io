@@ -1,6 +1,0 @@
-// Mixins: Resize
-// -------------------------
-@mixin resizable($direction) {
-	resize: $direction;
-	overflow: auto;
-}
